@@ -1,15 +1,16 @@
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f3f4f6;
+  font-family: "Times New Roman", Times, serif;
+  background: #dbeafe;
+  color: #0a1f44;
   padding: 40px 16px;
 }
 
 .card {
   max-width: 520px;
   margin: 0 auto;
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
@@ -18,24 +19,27 @@ body {
 h1 {
   margin: 0 0 12px;
   font-size: 26px;
+  color: #0a1f44;
 }
 
 h2 {
   margin: 16px 0 8px;
   font-size: 16px;
+  color: #0a1f44;
 }
 
 p {
   margin: 8px 0;
   line-height: 1.5;
+  color: #0a1f44;
 }
 
 button {
   margin-top: 14px;
   padding: 10px 12px;
-  border: 1px solid #d1d5db;
-  background: #111827;
-  color: white;
+  border: 1px solid #93c5fd;
+  background: #bfdbfe;
+  color: #0a1f44;
   border-radius: 10px;
   cursor: pointer;
 }
