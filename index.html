@@ -1,8 +1,73 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bits of Good - Intro Card</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<html>
-    <head>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-<!-- Your HTML Here -->
+  <body>
+    <main class="page">
+      <section class="card" aria-label="Introduction card">
+        <div class="card__header">
+          <div class="avatar" aria-hidden="true">
+            <span class="avatar__initials">SK</span>
+          </div>
+
+          <div class="titleblock">
+            <h1 class="name">Saisaketh Koppu</h1>
+            <p class="meta">Computer Science • Class of 2027</p>
+            <p class="meta">Georgia Tech</p>
+            <p class="from">From: <span>Atlanta, GA</span></p>
+          </div>
+        </div>
+
+        <div class="card__body">
+          <h2 class="sectionTitle">What I’m passionate about (social good)</h2>
+          <p class="passion">
+            I’m passionate about building accessible, high-impact tools that make
+            essential services easier to reach—especially in health, education, and
+            community support. I care about shipping practical software that reduces
+            friction for real people and organizations.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="interactive">
+            <h2 class="sectionTitle">Fun fact</h2>
+            <p class="hint">Click the button to reveal a quick fun fact about me.</p>
+
+            <div class="controls">
+              <button id="funFactBtn" class="btn" type="button">
+                Fun fact about me
+              </button>
+            </div>
+
+            <div id="funFactReveal" class="reveal" aria-live="polite">
+              <p class="reveal__text">My typing speed is <strong>168 WPM</strong>.</p>
+            </div>
+          </div>
+        </div>
+
+        <footer class="card__footer">
+          <span class="small">Vanilla HTML/CSS/JS</span>
+        </footer>
+      </section>
+    </main>
+
+    <script>
+      const funFactBtn = document.getElementById("funFactBtn");
+      const funFactReveal = document.getElementById("funFactReveal");
+
+      let isOpen = false;
+
+      funFactBtn.addEventListener("click", () => {
+        isOpen = !isOpen;
+        funFactReveal.classList.toggle("reveal--open", isOpen);
+        funFactBtn.textContent = isOpen ? "Hide fun fact" : "Fun fact about me";
+      });
+    </script>
+  </body>
 </html>
+
