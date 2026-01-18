@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Times New Roman", Times, serif;
-  background: #dbeafe;
+  background: #ffffff;
   color: #0a1f44;
   padding: 40px 16px;
 }
@@ -9,8 +9,8 @@ body {
 .card {
   max-width: 520px;
   margin: 0 auto;
-  background: #ffffff;
-  border: 1px solid #cbd5e1;
+  background: #dbeafe;
+  border: 1px solid #93c5fd;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
@@ -37,7 +37,7 @@ p {
 button {
   margin-top: 14px;
   padding: 10px 12px;
-  border: 1px solid #93c5fd;
+  border: 1px solid #60a5fa;
   background: #bfdbfe;
   color: #0a1f44;
   border-radius: 10px;
@@ -47,6 +47,11 @@ button {
 button:hover {
   opacity: 0.92;
 }
+
+.hidden {
+  display: none;
+}
+
 
 .hidden {
   display: none;
