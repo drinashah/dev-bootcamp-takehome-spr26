@@ -3,67 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bits of Good - Intro Card</title>
+    <title>Bits of Good Intro Card</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <main class="page">
-      <section class="card" aria-label="Introduction card">
-        <div class="card__header">
-          <div class="avatar" aria-hidden="true">
-            <span class="avatar__initials">DS</span>
-          </div>
+    <div class="card">
+      <h1>Saisaketh Koppu</h1>
 
-          <div class="titleblock">
-            <h1 class="name">Drina Shah</h1>
-            <p class="meta">Biomedical Engineering • Class of 2027</p>
-            <p class="meta">Georgia Tech</p>
-            <p class="from">From: <span>Mooresville, NC</span></p>
-          </div>
-        </div>
+      <p><strong>Major:</strong> Computer Science</p>
+      <p><strong>Year:</strong> Class of 2027</p>
+      <p><strong>From:</strong> Atlanta, GA</p>
 
-        <div class="card__body">
-          <h2 class="sectionTitle">What I’m passionate about (social good)</h2>
-          <p class="passion">
-            I’m passionate about building accessible, high-impact AI tools that make
-            essential services easier to reach, especially in healthcare, education, and within the community.
-          </p>
+      <h2>Social good interest</h2>
+      <p>
+        I’m passionate about building accessible, high-impact tools that make
+            essential services easier to reach, especially in healthcare, education, and
+            within the community.
+      </p>
 
-          <div class="divider"></div>
-
-          <div class="interactive">
-            <h2 class="sectionTitle">Fun fact</h2>
-            <p class="hint">Click the button to reveal a quick fun fact about me.</p>
-
-            <div class="controls">
-              <button id="funFactBtn" class="btn" type="button">
-                Fun fact about me
-              </button>
-            </div>
-
-            <div id="funFactReveal" class="reveal" aria-live="polite">
-              <p class="reveal__text">My typing speed is <strong>168 WPM</strong>.</p>
-            </div>
-          </div>
-        </div>
-
-        <footer class="card__footer">
-          <span class="small">Vanilla HTML/CSS/JS</span>
-        </footer>
-      </section>
-    </main>
+      <button id="funBtn" type="button">Fun fact about me</button>
+      <p id="funFact" class="hidden">My typing speed is <strong>168 WPM</strong>.</p>
+    </div>
 
     <script>
-      const funFactBtn = document.getElementById("funFactBtn");
-      const funFactReveal = document.getElementById("funFactReveal");
+      const btn = document.getElementById("funBtn");
+      const fact = document.getElementById("funFact");
 
-      let isOpen = false;
-
-      funFactBtn.addEventListener("click", () => {
-        isOpen = !isOpen;
-        funFactReveal.classList.toggle("reveal--open", isOpen);
-        funFactBtn.textContent = isOpen ? "Hide fun fact" : "Fun fact about me";
+      btn.addEventListener("click", () => {
+        fact.classList.toggle("hidden");
+        btn.textContent = fact.classList.contains("hidden")
+          ? "Fun fact about me"
+          : "Hide fun fact";
       });
     </script>
   </body>
